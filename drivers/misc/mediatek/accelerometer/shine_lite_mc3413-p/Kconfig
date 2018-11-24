@@ -1,0 +1,9 @@
+config MTK_SHINE_LITE_MC3413_P
+	bool "MTK_SHINE_LITE_MC3413_P for MediaTek package"
+	default n
+	help
+	  It support different accelerometer sensor.
+          If this option is set,
+	  it will support
+          MTK_SHINE_LITE_MC3413_P Accelerometer.
+

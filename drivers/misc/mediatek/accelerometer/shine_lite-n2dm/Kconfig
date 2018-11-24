@@ -1,0 +1,4 @@
+config MTK_SHINE_LITE_N2DM_NEW
+	bool "MTK_SHINE_LITE_LIS3DH_NEW for MediaTek package"
+	default n
+	

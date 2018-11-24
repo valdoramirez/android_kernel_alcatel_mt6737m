@@ -1,0 +1,5 @@
+config FINGERPRINT_GSL6163
+  bool FINGERPRINT_GSL6163
+  default n
+  help
+    silead fingerprint driver

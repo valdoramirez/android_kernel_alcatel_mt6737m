@@ -1,0 +1,329 @@
+
+#include "lcm_define.h"
+
+/ {
+	/* LCM standardization */
+	lcm_params@4{
+		compatible = "mediatek,lcm_params-pixi5_ili9806e_fwvga_dsi_wtdt";
+
+		lcm_params-types = <2 0 0 0>;
+		/* type, ctrl, lcm_if, lcm_cmd_if */
+		lcm_params-resolution = <480 854>;
+		/* width, height */
+		lcm_params-io_select_mode;
+
+		lcm_params-dbi-port;
+		lcm_params-dbi-clock_freq;
+		lcm_params-dbi-data_width;
+		lcm_params-dbi-data_format;
+		/* color_order, trans_seq, padding, format, width */
+		lcm_params-dbi-cpu_write_bits;
+		lcm_params-dbi-io_driving_current;
+		lcm_params-dbi-msb_io_driving_current;
+		lcm_params-dbi-ctrl_io_driving_current;
+
+		lcm_params-dbi-te_mode = <0>;
+		lcm_params-dbi-te_edge_polarity;
+		lcm_params-dbi-te_hs_delay_cnt;
+		lcm_params-dbi-te_vs_width_cnt;
+		lcm_params-dbi-te_vs_width_cnt_div;
+
+		lcm_params-dbi-serial-params0;
+		/* cs_polarity, clk_polarity, clk_phase, is_non_dbi_mode, clock_base, clock_div */
+		lcm_params-dbi-serial-params1;
+		/* css, csh, rd_1st, rd_2nd, wr_1st, wr_2nd */
+		lcm_params-dbi-serial-params2;
+		/* sif_1st_pol, sif_sck_def, sif_3wire, sif_sdi sif_div2, sif_hw_cs */
+		lcm_params-dbi-parallel-params0;
+		/* write_setup, write_hold, write_wait, read_setup */
+		lcm_params-dbi-parallel-params1;
+		/* read_hold, read_latency, wait_period, cs_high_width */
+
+		lcm_params-dpi-mipi_pll_clk_ref;
+		lcm_params-dpi-mipi_pll_clk_div1;
+		lcm_params-dpi-mipi_pll_clk_div2;
+		lcm_params-dpi-mipi_pll_clk_fbk_div;
+
+		lcm_params-dpi-dpi_clk_div;
+		lcm_params-dpi-dpi_clk_duty;
+		lcm_params-dpi-PLL_CLOCK;
+		lcm_params-dpi-dpi_clock;
+		lcm_params-dpi-ssc_disable;
+		lcm_params-dpi-ssc_range;
+
+		lcm_params-dpi-width;
+		lcm_params-dpi-height;
+		lcm_params-dpi-bg_width;
+		lcm_params-dpi-bg_height;
+
+		lcm_params-dpi-clk_pol;
+		lcm_params-dpi-de_pol;
+		lcm_params-dpi-vsync_pol;
+		lcm_params-dpi-hsync_pol;
+		lcm_params-dpi-hsync_pulse_width;
+		lcm_params-dpi-hsync_back_porch;
+		lcm_params-dpi-hsync_front_porch;
+		lcm_params-dpi-vsync_pulse_width;
+		lcm_params-dpi-vsync_back_porch;
+		lcm_params-dpi-vsync_front_porch;
+
+		lcm_params-dpi-format;
+		lcm_params-dpi-rgb_order;
+		lcm_params-dpi-is_serial_output;
+		lcm_params-dpi-i2x_en;
+		lcm_params-dpi-i2x_edge;
+		lcm_params-dpi-embsync;
+		lcm_params-dpi-lvds_tx_en;
+		lcm_params-dpi-bit_swap;
+		lcm_params-dpi-intermediat_buffer_num;
+		lcm_params-dpi-io_driving_current;
+		lcm_params-dpi-lsb_io_driving_current;
+
+		lcm_params-dsi-mode = <1>;
+		lcm_params-dsi-switch_mode;
+		lcm_params-dsi-DSI_WMEM_CONTI;
+		lcm_params-dsi-DSI_RMEM_CONTI;
+		lcm_params-dsi-VC_NUM;
+		lcm_params-dsi-lane_num = <2>;
+		lcm_params-dsi-data_format = <0 0 0 2>;
+		/* color_order, trans_seq, padding, format */
+		lcm_params-dsi-intermediat_buffer_num = <2>;
+		lcm_params-dsi-ps = <2>;
+		lcm_params-dsi-word_count = <1440>;
+		lcm_params-dsi-packet_size = <256>;
+
+		lcm_params-dsi-vertical_sync_active = <6>;
+		lcm_params-dsi-vertical_backporch = <14>;
+		lcm_params-dsi-vertical_frontporch = <20>;
+		lcm_params-dsi-vertical_frontporch_for_low_power;
+		lcm_params-dsi-vertical_active_line = <854>;
+		lcm_params-dsi-horizontal_sync_active = <10>;
+		lcm_params-dsi-horizontal_backporch = <80>;
+		lcm_params-dsi-horizontal_frontporch = <80>;
+		lcm_params-dsi-horizontal_blanking_pixel;
+		lcm_params-dsi-horizontal_active_pixel = <480>;
+		lcm_params-dsi-horizontal_bllp;
+		lcm_params-dsi-line_byte;
+		lcm_params-dsi-horizontal_sync_active_byte;
+		lcm_params-dsi-horizontal_backportch_byte;
+		lcm_params-dsi-horizontal_frontporch_byte;
+		lcm_params-dsi-rgb_byte;
+		lcm_params-dsi-horizontal_sync_active_word_count;
+		lcm_params-dsi-horizontal_backporch_word_count;
+		lcm_params-dsi-horizontal_frontporch_word_count;
+
+		lcm_params-dsi-HS_TRAIL = <7>;
+		lcm_params-dsi-ZERO;
+		lcm_params-dsi-HS_PRPR = <4>;
+		lcm_params-dsi-LPX;
+		lcm_params-dsi-TA_SACK;
+		lcm_params-dsi-TA_GET;
+		lcm_params-dsi-TA_SURE;
+		lcm_params-dsi-TA_GO;
+		lcm_params-dsi-CLK_TRAIL = <50>;
+		lcm_params-dsi-CLK_ZERO;
+		lcm_params-dsi-LPX_WAIT;
+		lcm_params-dsi-CONT_DET;
+		lcm_params-dsi-CLK_HS_PRPR;
+		lcm_params-dsi-CLK_HS_POST;
+		lcm_params-dsi-DA_HS_EXIT;
+		lcm_params-dsi-CLK_HS_EXIT;
+
+		lcm_params-dsi-pll_select;
+		lcm_params-dsi-pll_div1;
+		lcm_params-dsi-pll_div2;
+		lcm_params-dsi-fbk_div;
+		lcm_params-dsi-fbk_sel;
+		lcm_params-dsi-rg_bir;
+		lcm_params-dsi-rg_bic;
+		lcm_params-dsi-rg_bp;
+		lcm_params-dsi-pll_clock = <205>;
+		lcm_params-dsi-dsi_clock;
+		lcm_params-dsi-ssc_disable;
+		lcm_params-dsi-ssc_range;
+		lcm_params-dsi-compatibility_for_nvk;
+		lcm_params-dsi-cont_clock;
+
+		lcm_params-dsi-ufoe_enable;
+		lcm_params-dsi-ufoe_params;
+		/* compress_ratio, lr_mode_en, vlc_disable, vlc_config */
+		lcm_params-dsi-edp_panel;
+
+		lcm_params-dsi-customization_esd_check_enable;
+		lcm_params-dsi-esd_check_enable;
+
+		lcm_params-dsi-lcm_int_te_monitor;
+		lcm_params-dsi-lcm_int_te_period;
+		lcm_params-dsi-lcm_ext_te_monitor;
+		lcm_params-dsi-lcm_ext_te_enable;
+
+		lcm_params-dsi-noncont_clock;
+		lcm_params-dsi-noncont_clock_period;
+		lcm_params-dsi-clk_lp_per_line_enable;
+
+		lcm_params-dsi-lcm_esd_check_table0;
+		/* cmd, count, para_list[0], para_list[1] */
+		lcm_params-dsi-lcm_esd_check_table1;
+		lcm_params-dsi-lcm_esd_check_table2;
+
+		lcm_params-dsi-switch_mode_enable;
+		lcm_params-dsi-dual_dsi_type;
+		lcm_params-dsi-lane_swap_en;
+		lcm_params-dsi-lane_swap0;
+		/* lane_swap[0][0~5] */
+		lcm_params-dsi-lane_swap1;
+		/* lane_swap[1][0~5] */
+		lcm_params-dsi-vertical_vfp_lp;
+		lcm_params-physical_width;
+		lcm_params-physical_height;
+		lcm_params-od_table_size;
+		lcm_params-od_table;
+	};
+
+	lcm_ops@4 {
+		compatible = "mediatek,lcm_ops-pixi5_ili9806e_fwvga_dsi_wtdt";
+
+		init = <LCM_FUNC_UTIL LCM_UTIL_RESET 1 LCM_UTIL_RESET_HIGH>,
+			<LCM_FUNC_UTIL LCM_UTIL_MDELAY 1 10>,
+			<LCM_FUNC_UTIL LCM_UTIL_RESET 1 LCM_UTIL_RESET_LOW>,
+			<LCM_FUNC_UTIL LCM_UTIL_MDELAY 1 10>,
+			<LCM_FUNC_UTIL LCM_UTIL_RESET 1 LCM_UTIL_RESET_HIGH>,
+			<LCM_FUNC_UTIL LCM_UTIL_MDELAY 1 120>,
+
+
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 7 0xFF 5 0xFF 0x98 0x06 0x04 0x01>, // Change to Page 1				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x08 1 0x10>,// output SDA		
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x21 1 0x01>,// DE = 1 Active				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x30 1 0x01>,// 480 X 854				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x31 1 0x00>,// column Inversion 				 
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x40 1 0x14>,//11 BT  				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x41 1 0x33>,//44 DVDDH DVDDL clamp 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x42 1 0x03>,// VGH/VGL 01				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x43 1 0x09>,// VGH_CLAMP 0FF ;				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x44 1 0x07>,// VGL_CLAMP OFF ; 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x50 1 0x68>,//VGMP				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x51 1 0x68>,//VGMN				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x52 1 0x00>,//Flicker				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x53 1 0x40>,//Flicker				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x60 1 0x07>,// SDTI  				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x61 1 0x00>,// CRTI				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x62 1 0x08>,// EQTI				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x63 1 0x00>,// PCTI				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x57 1 0x50>,						
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xA0 1 0x00>,// Gamma 0 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xA1 1 0x04>,//2 Gamma 4 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xA2 1 0x0C>,// Gamma 8				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xA3 1 0x0E>,// Gamma 16				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xA4 1 0x07>,// Gamma 24 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xA5 1 0x18>,// Gamma 52 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xA6 1 0x09>,// Gamma 80				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xA7 1 0x0A>,// Gamma 108 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xA8 1 0x02>,// Gamma 147				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xA9 1 0x08>,// Gamma 175				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xAA 1 0x05>,// Gamma 203				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xAB 1 0x02>,// Gamma 231				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xAC 1 0x0B>,// Gamma 239 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xAD 1 0x38>,// Gamma 247 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xAE 1 0x35>,// Gamma 251 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xAF 1 0x00>,// Gamma 255	
+		
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xC0 1 0x00>,// Gamma 0  	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xC1 1 0x03>,//1 Gamma 4 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xC2 1 0x0D>,// Gamma 8 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xC3 1 0x11>,// Gamma 16 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xC4 1 0x0A>,// Gamma 24 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xC5 1 0x15>,// Gamma 52				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xC6 1 0x0B>,// Gamma 80 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xC7 1 0x09>,// Gamma 108				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xC8 1 0x04>,// Gamma 147 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xC9 1 0x08>,// Gamma 175 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xCA 1 0x08>,// Gamma 203				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xCB 1 0x05>,// Gamma 231				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xCC 1 0x0A>,// Gamma 239				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xCD 1 0x21>,// Gamma 247				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xCE 1 0x1B>,// Gamma 251 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xCF 1 0x00>,// Gamma 255	
+		
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 7 0xFF 5 0xFF 0x98 0x06 0x04 0x06>,// Change to Page 6 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x00 1 0x21>, 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x01 1 0x09>,			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x02 1 0x00>,  				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x03 1 0x00>,	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x04 1 0x01>,			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x05 1 0x01>,			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x06 1 0x80>,			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x07 1 0x05>,			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x08 1 0x02>,				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x09 1 0x80>, 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x0A 1 0x00>,			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x0B 1 0x00>,  				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x0C 1 0x0A>,				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x0D 1 0x0A>, 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x0E 1 0x00>,				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x0F 1 0x00>,				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x10 1 0xE0>,			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x11 1 0xE4>,			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x12 1 0x04>,			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x13 1 0x00>,			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x14 1 0x00>, 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x15 1 0xC0>, 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x16 1 0x08>, 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x17 1 0x00>,				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x18 1 0x00>, 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x19 1 0x00>,			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x1A 1 0x00>,	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x1B 1 0x00>,	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x1C 1 0x00>,	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x1D 1 0x00>,	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x20 1 0x01>,		
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x21 1 0x23>,
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x22 1 0x45>,	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x23 1 0x67>,	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x24 1 0x01>,
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x25 1 0x23>,	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x26 1 0x45>,
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x27 1 0x67>,
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x30 1 0x01>,
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x31 1 0x11>,//GOUT1	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x32 1 0x00>,//GOUT2	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x33 1 0xEE>,//GOUT3 		
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x34 1 0xFF>,//GOUT4
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x35 1 0xBB>,//GOUT5	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x36 1 0xCA>,//GOUT6	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x37 1 0xDD>,//GOUT7	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x38 1 0xAC>,//GOUT8	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x39 1 0x76>,//GOUT9
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x3A 1 0x67>,//GOUT10		
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x3B 1 0x22>,//GOUT11		
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x3C 1 0x22>,//GOUT12		
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x3D 1 0x22>,//GOUT13		
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x3E 1 0x22>,//GOUT14			
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x3F 1 0x22>,		
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x40 1 0x22>,
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x54 1 0x13>,
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 7 0xFF 5 0xFF 0x98 0x06 0x04 0x07>,// Change to Page 7
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x06 1 0x10>,
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x17 1 0x22>,//
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x02 1 0x77>,//	
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0xE1 1 0x79>,//
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x26 1 0xB2>,//	
+									
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 7 0xFF 5 0xFF 0x98 0x06 0x04 0x00>,// Change to Page 0 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x35 0 0x00>,// TE on 				
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x11 0 0x00>,// Sleep-Out	
+		<LCM_FUNC_UTIL LCM_UTIL_MDELAY 1 200>,
+		<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x29 0 0x00>,// Display on	
+		<LCM_FUNC_UTIL LCM_UTIL_MDELAY 1 50>;
+		compare_id = <LCM_FUN_ID_SET LCM_GPIO_ID1_MODE 1 81>,
+			<LCM_FUN_ID_SET LCM_GPIO_ID2_MODE 1 82>,
+			<LCM_FUNC_UTIL LCM_UTIL_MDELAY 1 10>,
+			<LCM_FUN_ID_CHECK 0 1 1>;
+
+		suspend =<LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x28 0 0x00>,
+     		      <LCM_FUNC_UTIL LCM_UTIL_MDELAY 1 10>,
+		      <LCM_FUNC_CMD LCM_UTIL_WRITE_CMD_V2 3 0x10 0 0x00>,
+     		      <LCM_FUNC_UTIL LCM_UTIL_MDELAY 1 120>;
+	};
+	/* LCM standardization end */
+};
+

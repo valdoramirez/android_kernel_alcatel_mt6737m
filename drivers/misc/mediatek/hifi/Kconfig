@@ -1,0 +1,18 @@
+config MTK_HIFI
+    bool "MTK_HIFI"
+    default n
+    help
+        If you say Y, enable MTK_EXT_CODEC. 
+    
+#choice
+config MTK_HIFI_CHIP_AK4376
+	bool "AKM ak4376 hifi"
+	default n
+	depends on MTK_HIFI
+	
+config MTK_HIFI_CHIP_AK4375
+    bool "AKM ak4375 hifi"
+    default n
+    depends on MTK_HIFI
+#endchoice
+

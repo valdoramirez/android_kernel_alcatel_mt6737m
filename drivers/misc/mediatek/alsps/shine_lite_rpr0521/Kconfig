@@ -1,0 +1,5 @@
+
+config MTK_SHINE_LITE_RPR0521
+    bool "rpr0521 for MediaTek package"
+    default n
+
